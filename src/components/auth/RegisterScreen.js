@@ -51,9 +51,7 @@ export const RegisterScreen = () => {
                 <div className = "content">
                     <h1 className="auth__title">Register</h1>
 
-                    {
-                        msgError && <div className="auth__alert-error">{msgError}</div>
-                    }
+                    
 
                     <input
                         type="text"
@@ -92,7 +90,7 @@ export const RegisterScreen = () => {
                     />
 
                     <button
-                        className="btn btn-primary btn-block mb-5"
+                        className="btn-primary btn-block"
                         type="submit"
 
                     >
@@ -104,6 +102,10 @@ export const RegisterScreen = () => {
                     >
                         Allready registered?
                     </Link>
+
+                    {
+                        msgError && <div className="auth__alert-error animate__animated animate__fadeInDown">{msgError}</div>
+                    }
                 </div>
             </form>
         </div>

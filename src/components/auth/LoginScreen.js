@@ -44,11 +44,9 @@ export const LoginScreen = () => {
     return (
         <div className='container animate__animated animate__fadeIn animate__faster'>
             <form onSubmit={handleLogin} className="box">
-                <div className = "content">
+                <div className="content">
                     <h1 className="auth__title">Login</h1>
-                    {
-                        msgError && <div className="auth__alert-error">{msgError}</div>
-                    }
+
                     <input
                         type="text"
                         placeholder="Email"
@@ -101,6 +99,9 @@ export const LoginScreen = () => {
                     >
                         Create new account
                 </Link>
+                    {
+                        msgError && <div className="auth__alert-error animate__animated animate__fadeInDown">{msgError}</div>
+                    }
                 </div>
             </form>
         </div>

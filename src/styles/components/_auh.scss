@@ -20,6 +20,7 @@
 .auth__title{
     color: darken($color: $primary, $amount: 20);
     margin-bottom: 20px;
+    z-index: -1000;
 }
 
 .auth__input{

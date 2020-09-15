@@ -1,0 +1,154 @@
+.auth__main{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    background-color: $primary;
+    margin: 0px;
+    height: 100vh;
+    width: 100vw;
+}
+
+.auth__box-container{
+    background-color: white;
+    box-shadow: 0px 3px $dark-grey;
+    border-radius: 2px;
+    padding: 20px;
+    width: 250px;
+    
+}
+
+.auth__title{
+    color: darken($color: $primary, $amount: 20);
+    margin-bottom: 20px;
+}
+
+.auth__input{
+    color: $dark-grey;
+    border: 0px;
+    border-bottom: 1px solid $light-grey;
+    font-size: 16px;
+    margin-bottom: 10px;
+    height: 20px;
+    width: 100%;
+
+    transition: border-bottom .3s ease;
+
+    &:focus{
+        border-bottom: 1px solid $primary;
+        outline: none;
+    }
+}
+
+.auth__social-networks{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 100%;
+}
+
+.auth__alert-error{
+    background-color: red;
+    border-radius: 5px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+
+
+.box{
+    width: 400px;
+    padding: 40px;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #191919;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    z-index: 1000;
+    align-items: center;
+    
+    .content{
+        position: relative;
+        padding: 20px;
+        h1{
+            position: absolute;
+            top: -120px;
+            right: 5px;
+            margin: 0;
+            padding: 0;
+            color: $white;
+            font-size: 10em;
+            color: rgba(255, 255, 255, .05);
+            text-transform: uppercase;
+            font-weight: 500;
+            transition: 0.5s;
+        }
+        input{
+            border: 0;
+            background: none;
+            display: block;
+            margin: 20px auto;
+            text-align: center;
+            border: 2px solid #3498db;
+            padding: 14px 10px;
+            width: 150px;
+            outline: none;
+            color: $white;
+            border-radius: 24px;
+            transition: 0.25s;
+            &:focus{
+                width: 200px;
+                border-color: #2ecc71;
+            }
+        }
+        button{
+            cursor: pointer;
+            position: relative;
+            border: 0;
+            background: none;
+            display: inline-block;
+            margin: 20px 0 0;
+            text-align: center;
+            border: 2px solid #2ecc71;
+            padding: 10px 40px;
+            width: 150px;
+            outline: none;
+            border-radius: 24px;
+            transition: 0.5s;
+            transform: translateY(-40px);
+            opacity: 0;
+            visibility: hidden;
+            color: $white;
+            &:hover{
+                background:  #3498db;
+            }
+        }
+        .auth__social-networks{
+            color: $white;
+        }
+        .link{
+            color: $white;
+        }
+    }
+    &:hover{
+        h1{
+            top: -190px;
+        }
+        button{
+            transform: translateY(0px);
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
+    
+}
+

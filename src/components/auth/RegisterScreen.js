@@ -14,10 +14,10 @@ export const RegisterScreen = () => {
     const { msgError } = state.ui;
 
     const [formValue, handleForm] = useForm({
-        name: 'Hernando',
-        email: 'nando@gmail.com',
-        password: '123456',
-        password2: '123456'
+        name: '',
+        email: '',
+        password: '',
+        password2: ''
     });
 
     const { name, email, password, password2 } = formValue;
@@ -46,63 +46,65 @@ export const RegisterScreen = () => {
     }
 
     return (
-        <div className='animate__animated animate__fadeIn animate__faster'>
-            <form onSubmit={handleRegister} className = "box">
-            <h3 className="auth__title">Register</h3>
+        <div className='container animate__animated animate__fadeIn animate__faster'>
+            <form onSubmit={handleRegister} className="box">
+                <div className = "content">
+                    <h3 className="auth__title">Register</h3>
 
-                {
-                    msgError && <div className="auth__alert-error">{msgError}</div>
-                }
+                    {
+                        msgError && <div className="auth__alert-error">{msgError}</div>
+                    }
 
-                <input
-                    type="text"
-                    placeholder="Name"
-                    name="name"
-                    value={name}
-                    onChange={handleForm}
-                    className="auth__input"
-                    autoComplete="off"
-                />
-                <input
-                    type="text"
-                    placeholder="Email"
-                    name="email"
-                    value={email}
-                    onChange={handleForm}
-                    className="auth__input"
-                    autoComplete="off"
-                />
+                    <input
+                        type="text"
+                        placeholder="Name"
+                        name="name"
+                        value={name}
+                        onChange={handleForm}
+                        className="auth__input"
+                        autoComplete="off"
+                    />
+                    <input
+                        type="text"
+                        placeholder="Email"
+                        name="email"
+                        value={email}
+                        onChange={handleForm}
+                        className="auth__input"
+                        autoComplete="off"
+                    />
 
-                <input
-                    type="password"
-                    placeholder="Password"
-                    name="password"
-                    value={password}
-                    onChange={handleForm}
-                    className="auth__input"
-                />
-                <input
-                    type="password"
-                    placeholder="Confirm password"
-                    name="password2"
-                    value={password2}
-                    onChange={handleForm}
-                    className="auth__input"
-                />
+                    <input
+                        type="password"
+                        placeholder="Password"
+                        name="password"
+                        value={password}
+                        onChange={handleForm}
+                        className="auth__input"
+                    />
+                    <input
+                        type="password"
+                        placeholder="Confirm password"
+                        name="password2"
+                        value={password2}
+                        onChange={handleForm}
+                        className="auth__input"
+                    />
 
-                <button
-                    className="btn btn-primary btn-block mb-5"
-                    type="submit"
+                    <button
+                        className="btn btn-primary btn-block mb-5"
+                        type="submit"
 
-                >
-                    Register
-            </button>
-                <Link
-                    className="link"
-                    to="/auth/login"
-                >
-                    Allready registered?
-                </Link>
+                    >
+                        Register
+                    </button>
+                    <Link
+                        className="link"
+                        to="/auth/login"
+                    >
+                        Allready registered?
+                    </Link>
+                </div>
             </form>
         </div>
     )
